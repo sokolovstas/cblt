@@ -7,7 +7,7 @@
   <script>
     document.addEventListener('keydown', function(e) {
       document.getElementById('keycode').innerHTML = JSON.stringify({ keycode: e.keyCode, key: e.key }, null, 4);
-      window.platform.console.log("KEYDOWN", JSON.stringify({ keycode: e.keyCode, key: e.key }));
+      window.platform.console.log("KEYDOWN" + JSON.stringify({ keycode: e.keyCode, key: e.key }));
     })
   </script>
 </html>
