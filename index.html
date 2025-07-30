@@ -3,9 +3,11 @@
   <body style="display: flex; height: 100vh; flex-direction: column; align-items: center; justify-content: center; background-color: white; color: black">
     <h1 style="font-size: 300%">Push the button</h1>
     <pre id="keycode" style="font-size: 200%"></pre>
+    <pre id="time" style="font-size: 200%"></pre>
   </body>
   <script>
     document.addEventListener('keydown', function(e) {
+      document.getElementById('keycode').innerHTML = new Date();
       document.getElementById('keycode').innerHTML = JSON.stringify({ keycode: e.keyCode, key: e.key }, null, 4);
       window.platform.console.log("KEYDOWN" + JSON.stringify({ keycode: e.keyCode, key: e.key }));
     })
