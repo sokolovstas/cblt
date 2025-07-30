@@ -8,7 +8,7 @@
   <script>
     document.addEventListener('keydown', function(e) {
       document.getElementById('keycode').innerHTML = new Date();
-      document.getElementById('keycode').innerHTML = JSON.stringify({ keycode: e.keyCode, key: e.key }, null, 4);
+      document.getElementById('time').innerHTML = JSON.stringify({ keycode: e.keyCode, key: e.key }, null, 4);
       window.platform.console.log("KEYDOWN" + JSON.stringify({ keycode: e.keyCode, key: e.key }));
     })
   </script>
